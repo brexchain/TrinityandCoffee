@@ -196,6 +196,19 @@ export const TIMELINE_EVENTS = [
   }
 ];
 
+export const GALLERY_IMAGES = [
+  { url: 'https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&q=80&w=400', title: 'Trinity' },
+  { url: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=400', title: 'Kuscheln' },
+  { url: 'https://images.unsplash.com/photo-1591769225440-811ad7d6eca3?auto=format&fit=crop&q=80&w=400', title: 'Haufen' },
+  { url: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&q=80&w=400', title: 'Wachsen' },
+  { url: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=400', title: 'Hunger' },
+  { url: 'https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?auto=format&fit=crop&q=80&w=400', title: 'Welpenbad' },
+  { url: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=400', title: 'Schlaf' },
+  { url: 'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=400', title: 'Entdecker' },
+  { url: 'https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&q=80&w=400', title: 'Garten' },
+  { url: 'https://images.unsplash.com/photo-1503256207526-0df55635218b?auto=format&fit=crop&q=80&w=400', title: 'Freunde' },
+];
+
 export const WHATSAPP_CHATS = [
   { author: "Kat Au", message: "Überstanden...Halleluja! ✨🙏✨ Gratuliere, Trinity!", date: "28.09.2025" },
   { author: "+43 676 6803735", message: "Wow wie wundervoll das ist ja unglaublich so toll gemacht! Willkommen im Leben ihr süßen Welpen..", date: "28.09.2025" },

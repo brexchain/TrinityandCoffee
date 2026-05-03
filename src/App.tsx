@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Music, Pause, Download, ChartBar, TreePine, Camera, Quote, MessageCircle } from 'lucide-react';
 import html2canvas from 'html2canvas';
 
-import { PUPPIES, TIMELINE_EVENTS, WHATSAPP_CHATS } from './constants';
+import { PUPPIES, TIMELINE_EVENTS, WHATSAPP_CHATS, GALLERY_IMAGES } from './constants';
 import { Polaroid } from './components/Polaroid';
 import { PuppyCard } from './components/PuppyCard';
 import { WeightChart } from './components/WeightChart';
@@ -115,6 +115,51 @@ export default function App() {
             </div>
           </div>
         </header>
+
+        {/* Snapshot Gallery (Horizontal Swipe) */}
+        <section className="mb-24">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="font-display text-4xl text-accent dark:text-gold">Schnappschüsse</h2>
+              <p className="text-sm italic opacity-60 font-hand">Die schönsten Momente im Querformat</p>
+            </div>
+            <div className="hidden md:flex gap-2">
+               <span className="text-xs opacity-40 font-mono italic">← Swipe to explore →</span>
+            </div>
+          </div>
+          <div className="flex gap-4 overflow-x-auto pb-6 snap-x snap-mandatory no-scrollbar -mx-4 px-4 mask-fade-edges">
+            {GALLERY_IMAGES.map((img, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="flex-shrink-0 w-72 h-48 bg-white dark:bg-[#262626] p-2 shadow-xl border border-neutral-100 dark:border-neutral-800 snap-start"
+              >
+                <div className="relative w-full h-full overflow-hidden">
+                  <img 
+                    src={img.url} 
+                    alt={img.title} 
+                    className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-black/40 backdrop-blur-sm text-white text-[10px] uppercase tracking-widest font-display">
+                    {img.title}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+            {/* Call to action card at the end of the swipe */}
+            <motion.a
+              href="https://chat.whatsapp.com/example"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 w-72 h-48 bg-[#25D366] p-6 flex flex-col items-center justify-center text-center text-white shadow-xl snap-start cursor-pointer hover:bg-[#128C7E] transition-colors"
+            >
+              <MessageCircle size={40} className="mb-4" />
+              <p className="font-display text-xl mb-1">Mehr Fotos?</p>
+              <p className="text-xs opacity-90">Komm in unsere WhatsApp Gruppe!</p>
+            </motion.a>
+          </div>
+        </section>
 
         {/* Dynamic Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
