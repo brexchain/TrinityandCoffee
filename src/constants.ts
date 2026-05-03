@@ -12,6 +12,7 @@ export interface Puppy {
     wochen12: string;
   };
   quote?: string;
+  videoUrl?: string;
   tags: string[];
 }
 
@@ -26,6 +27,7 @@ export const PUPPIES: Puppy[] = [
     merkmale: 'Zeichnung von Trinity',
     stats: { geburtsgewicht: '391g', nach24h: '437g (+12%)', wochen12: '10,9kg' },
     quote: "Die Erstgeborene, das Mädchen, das ich mir behalten würde",
+    videoUrl: "https://fb.watch/Fsmv1gFxSy/",
     tags: ['hündin', 'erstgeborene']
   },
   {
@@ -37,18 +39,20 @@ export const PUPPIES: Puppy[] = [
     color: 'Fleckvieh',
     merkmale: 'Two-Eye, Fleckviehmuster, schwarzer Fleck am Schwanzansatz',
     stats: { geburtsgewicht: '382g', nach24h: '422g (+10%)', wochen12: '10kg' },
+    videoUrl: "https://fb.watch/FsmG8tpXIh/",
     tags: ['hündin', 'fleckvieh']
   },
   {
-    id: 'boa',
-    name: 'Boa',
-    emoji: '🤍',
-    besitzer: 'vergeben',
+    id: 'cora',
+    name: 'Cora (Beau/Boa)',
+    emoji: '🧡',
+    besitzer: '+43 699 17795928',
     gender: 'Hündin',
     color: 'Schwarz/Weiß',
-    merkmale: 'Schwarz mit breitem weißen Kragen + Nasenstrich',
-    stats: { geburtsgewicht: '357g', nach24h: '422g (+18%)', wochen12: '9,5kg' },
-    tags: ['hündin']
+    merkmale: 'Ehemals Beau/Boa, Schwarz mit breitem weißen Kragen + Nasenstrich',
+    stats: { geburtsgewicht: '357g', nach24h: '422g (+18%)', wochen12: '9,7kg' },
+    videoUrl: "https://fb.watch/FsmR9DtNe4/",
+    tags: ['hündin', 'cora']
   },
   {
     id: 'brownie',
@@ -60,6 +64,7 @@ export const PUPPIES: Puppy[] = [
     merkmale: 'Fast weiß mit kleinen Flecken, Schwanzspitze weiß',
     stats: { geburtsgewicht: '381g', nach24h: '447g (+17%)', wochen12: '10,2kg' },
     quote: "Genau die Zeichnung vom Papa Coffee",
+    videoUrl: "https://fb.watch/FsmJtjrRxZ/",
     tags: ['rüde', 'coffee-look']
   },
   {
@@ -71,11 +76,12 @@ export const PUPPIES: Puppy[] = [
     color: 'Fleckvieh',
     merkmale: 'Fleckviehmuster, Piratenaugenklappe rechts',
     stats: { geburtsgewicht: '376g', nach24h: '444g (+18%)', wochen12: '10,5kg' },
+    videoUrl: "https://fb.watch/FsmMQEljmk/",
     tags: ['rüde', 'pirat']
   },
   {
     id: 'blacky',
-    name: 'Blacky',
+    name: 'Saela (Blacky)',
     emoji: '🖤',
     besitzer: 'vergeben',
     gender: 'Rüde',
@@ -83,6 +89,7 @@ export const PUPPIES: Puppy[] = [
     merkmale: 'Fast ganz schwarz',
     stats: { wochen12: '11,7kg' },
     quote: "Blacky ist bereits vergeben und wird zauberhaft aufwachsen...",
+    videoUrl: "https://fb.watch/FsmBvv_GHs/",
     tags: ['rüde', 'black']
   },
   {
@@ -95,6 +102,7 @@ export const PUPPIES: Puppy[] = [
     merkmale: 'Fleckviehmuster',
     stats: { wochen12: '11kg' },
     quote: "Schlawiner vom Wurf, immer zum Spielen aufgelegt",
+    videoUrl: "https://fb.watch/Fsmn1DLS4y/",
     tags: ['rüde', 'schlawiner']
   },
   {
@@ -109,17 +117,6 @@ export const PUPPIES: Puppy[] = [
     quote: "Herzerwärmend an Kopf und Hals beim Schlafen",
     tags: ['rüde', 'bounty']
   },
-  {
-    id: 'cora',
-    name: 'Cora',
-    emoji: '🧡',
-    besitzer: '+43 699 17795928',
-    gender: 'Hündin',
-    color: 'Unbekannt',
-    merkmale: 'Ehemals Beau',
-    stats: { wochen12: '9,7kg' },
-    tags: ['hündin', 'cora']
-  }
 ];
 
 export const WEIGHT_DATA = [
@@ -134,6 +131,17 @@ export const WEIGHT_DATA = [
 ];
 
 export const TIMELINE_EVENTS = [
+  {
+    date: '28.09.2025',
+    title: 'Die ersten Videos',
+    description: 'Um den Kreis rund zu machen, poste ich hier nochmal die ersten Videos dieser Sweeties.',
+    image: 'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=800',
+    caption: 'Die ersten Videos dieser Sweeties',
+    quote: "Ich werd wohl bisschen sentimental und kann es selbst kaum fassen...",
+    author: "Clemens Sparowitz",
+    link: "https://fb.watch/Fsmn1DLS4y/",
+    tags: ['meilenstein', 'trinity']
+  },
   {
     date: '28.09.2025',
     title: 'Der große Tag',
@@ -156,6 +164,16 @@ export const TIMELINE_EVENTS = [
   },
   {
     date: '29.09.2025',
+    title: 'Die erste Nacht',
+    description: 'Trinity und die Welpen haben die erste Nacht gut überstanden.',
+    image: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=800',
+    caption: 'Ruhe nach dem Sturm',
+    quote: "Die erste Nacht war ruhig, Gott sei Dank. Trinity schläft viel.",
+    author: "Clemens Sparowitz",
+    tags: ['trinity']
+  },
+  {
+    date: '30.09.2025',
     title: 'Die Vorstellung',
     description: 'In dem Gewusel sind sie nicht gleich leicht zu unterscheiden.',
     image: 'https://images.unsplash.com/photo-1591769225440-811ad7d6eca3?auto=format&fit=crop&q=80&w=800',
@@ -173,6 +191,16 @@ export const TIMELINE_EVENTS = [
     quote: "Alle 7 zusammen hatten bei der Geburt 2.724g. 14 Tage später stolze 9.250g (+240%)",
     author: "Clemens Sparowitz",
     tags: ['meilenstein', 'statistik']
+  },
+  {
+    date: '08.10.2025',
+    title: 'Blaues Wunder',
+    description: 'Die ersten Welpen öffnen ihre strahlend blauen Augen.',
+    image: 'https://images.unsplash.com/photo-1519400197429-404ae1a1e184?auto=format&fit=crop&q=80&w=800',
+    caption: 'Die Welt wird sichtbar',
+    quote: "Die blauen Augen am Anfang sind so faszinierend. 💙",
+    author: "Carina",
+    tags: ['meilenstein']
   },
   {
     date: '14.10.2025',
@@ -193,6 +221,68 @@ export const TIMELINE_EVENTS = [
     quote: "So depressiv kannst' garnicht sein, dass du dann nicht voll happy bist",
     author: "+43 664 5107941",
     tags: ['welpenbad']
+  },
+  {
+    date: '20.10.2025',
+    title: 'Die ersten "Wuffs"',
+    description: 'Das Schweigen ist gebrochen - die Welpen entdecken ihre Stimme.',
+    image: 'https://images.unsplash.com/photo-1505628344581-b7282eb9be6a?auto=format&fit=crop&q=80&w=800',
+    caption: 'Stimmgewalt im Kinderzimmer',
+    quote: "Sie fangen an zu bellen, so winzig und doch so laut.",
+    author: "Hannes",
+    tags: ['meilenstein']
+  },
+  {
+    date: '25.10.2025',
+    title: 'Piranha-Modus',
+    description: 'Die ersten Zähnchen brechen durch und werden sofort getestet.',
+    image: 'https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?auto=format&fit=crop&q=80&w=800',
+    caption: 'Alles wird angeknabbert',
+    quote: "Zähne sind da! Aua beim Spielen 😂 Kleine Piraten.",
+    author: "Dani",
+    tags: ['meilenstein']
+  },
+  {
+    date: '28.10.2025',
+    title: 'Expedition Garten',
+    description: 'Die Welpen erkunden zum ersten Mal die grüne Welt draußen.',
+    image: 'https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&q=80&w=800',
+    caption: 'Abenteuer im Freien',
+    quote: "Das Video vom Spielen im Garten war herrlich. Pures Chaos!",
+    author: "Sandra",
+    tags: ['meilenstein']
+  },
+  {
+    date: '20.12.2025',
+    title: 'Abschied naht',
+    description: 'Die Koffer werden langsam gepackt für die Reise in neue Abenteuer.',
+    image: 'https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&q=80&w=800',
+    caption: 'Zeit, flügge zu werden',
+    quote: "Diese Tapsen auf dem Flur... das werde ich vermissen.",
+    author: "Erich",
+    tags: ['meilenstein']
+  },
+  {
+    date: '03.05.2026',
+    title: 'Instagram Rückblick',
+    description: 'Die süßen Würmchen sind zu tollen Junghunden geworden.',
+    image: 'https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&q=80&w=800',
+    caption: 'Instagram Reel Highlights',
+    quote: "Vom Würmchen zum tollen Junghund.",
+    author: "Clemens Sparowitz",
+    link: "https://www.instagram.com/reel/DTd5NLHCSfB/?igsh=NXZ5MGpqM2lqeGZn",
+    tags: ['meilenstein']
+  },
+  {
+    date: '03.05.2026',
+    title: 'Ein sentimentaler Rückblick',
+    description: 'Vom Würmchen zum stolzen Junghund. Eine Reise voller Liebe und Dankbarkeit.',
+    image: 'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=800',
+    caption: 'Diesen Würmchen, die nun zu so tollen Junghunden geworden sind.',
+    quote: "Ich danke euch Allen für die Anteilnahme und euer Interesse den Lebensweg dieser Süßen weiter zu begleiten.",
+    author: "Clemens Sparowitz",
+    link: "https://www.facebook.com/permalink.php?story_fbid=pfbid0wjLsPhLPepnquEKPPDHoeWP4Xc3HPJMfZ8rP59tj8oobamWyBJwpWKrjpwsjCCCil&id=61578709837034",
+    tags: ['meilenstein']
   }
 ];
 
@@ -202,6 +292,8 @@ export const GALLERY_IMAGES = [
   { url: 'https://images.unsplash.com/photo-1591769225440-811ad7d6eca3?auto=format&fit=crop&q=80&w=400', title: 'Haufen' },
   { url: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&q=80&w=400', title: 'Wachsen' },
   { url: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=400', title: 'Hunger' },
+  { url: 'https://fb.watch/Fsmn1DLS4y/', title: 'Die ersten Schritte', type: 'video', thumbnail: 'https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?auto=format&fit=crop&q=80&w=400' },
+  { url: 'https://fb.watch/Fsmv1gFxSy/', title: 'Eve stellt sich vor', type: 'video', thumbnail: 'https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&q=80&w=400' },
   { url: 'https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?auto=format&fit=crop&q=80&w=400', title: 'Welpenbad' },
   { url: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=400', title: 'Schlaf' },
   { url: 'https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=400', title: 'Entdecker' },

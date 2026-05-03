@@ -18,8 +18,8 @@ export function WeightChart() {
         <AreaChart data={WEIGHT_DATA}>
           <defs>
             <linearGradient id="colorWeight" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8b5a2b" stopOpacity={0.3}/>
-              <stop offset="95%" stopColor="#8b5a2b" stopOpacity={0}/>
+              <stop offset="5%" stopColor="#2d5a27" stopOpacity={0.3}/>
+              <stop offset="95%" stopColor="#2d5a27" stopOpacity={0}/>
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e5e7eb" />
@@ -46,7 +46,7 @@ export function WeightChart() {
           <Area 
             type="monotone" 
             dataKey="gewicht" 
-            stroke="#8b5a2b" 
+            stroke="#2d5a27" 
             strokeWidth={3}
             fillOpacity={1} 
             fill="url(#colorWeight)" 

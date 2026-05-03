@@ -5,11 +5,11 @@
   --font-hand: "Kalam", cursive;
   --font-display: "Caveat", cursive;
 
-  --color-paper: #f5f1e8;
-  --color-ink: #3a3226;
-  --color-accent: #8b5a2b;
-  --color-shadow: rgba(58, 50, 38, 0.2);
-  --color-gold: #d4af37;
+  --color-paper: #f0f7f0;
+  --color-ink: #1a2b1a;
+  --color-accent: #2d5a27;
+  --color-shadow: rgba(26, 43, 26, 0.15);
+  --color-gold: #f4d03f;
 
   /* Hex overrides for html2canvas compatibility */
   --color-neutral-50: #fafafa;
@@ -21,10 +21,13 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply font-hand bg-paper text-ink selection:bg-[rgba(139,90,43,0.3)];
-    background-image: radial-gradient(#d1ccbc 0.5px, transparent 0.5px);
-    background-size: 20px 20px;
+    @apply font-hand bg-paper text-ink selection:bg-[rgba(45,90,39,0.2)];
+    background-image: radial-gradient(#d1dbd1 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
     line-height: 1.6;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -47,8 +50,8 @@
 }
 
 .paper-card {
-  @apply bg-[#fff9e6] backdrop-blur-sm border-2 border-dashed border-[rgba(139,90,43,0.2)] p-8 text-center transform shadow-inner rounded-2xl;
-  background-color: rgba(255, 249, 230, 0.8);
+  @apply bg-[#f2fcf2] backdrop-blur-sm border-2 border-dashed border-[rgba(45,90,39,0.15)] p-8 text-center transform shadow-inner rounded-2xl;
+  background-color: rgba(242, 252, 242, 0.8);
   transform: rotate(-0.5deg);
 }
 
@@ -73,11 +76,15 @@
 ::-webkit-scrollbar {
   width: 8px;
 }
+::selection {
+  @apply bg-[rgba(45,90,39,0.2)] text-inherit;
+}
+
 ::-webkit-scrollbar-track {
   @apply bg-paper;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-[rgba(139,90,43,0.3)] rounded-full;
+  @apply bg-[rgba(45,90,39,0.2)] rounded-full;
 }
 .dogfather-mode ::-webkit-scrollbar-track {
   background-color: var(--color-neutral-900);
